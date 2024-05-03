@@ -96,7 +96,7 @@ Use the finalScore function below to do the following:
 function finalScore(cb, num) {
   let homeScore = 0;
   let awayScore = 0;
-  for (let i = 1; i < num + 1; i++) {
+  for (let i = 1; i <= num; i++) {
     homeScore += cb();
     awayScore += cb();
   }
@@ -167,7 +167,7 @@ function scoreboard(cbInningScore, cbRandomNumber, num) {
   let finalHome = 0;
   let finalAway = 0;
 
-  for (let i = 1; i < num + 1; i++) {
+  for (let i = 1; i <= num; i++) {
     const home = cbInningScore(cbRandomNumber)["Home"];
     const away = cbInningScore(cbRandomNumber)["Away"];
     finalHome += home;
